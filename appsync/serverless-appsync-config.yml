@@ -1,0 +1,27 @@
+name: appsync-test
+schema: appsync/schema.graphql
+authenticationType: AMAZON_COGNITO_USER_POOLS
+additionalAuthenticationProviders:
+  - authenticationType: AWS_IAM
+userPoolConfig:
+  awsRegion: ${self:provider.region}
+  defaultAction: ALLOW
+  userPoolId: !Ref UserPool
+logConfig:
+  logginRoleArn: !GetAtt AppSyncLoggingServiceRole.Arn
+  level: ERROR
+  excludeVerboseContent: false
+xrayEnabled: false
+
+mappingTemplatesLocation: appsync/mappings
+mappingTemplates:
+  # Cards
+  - type: Query
+    field: getCard
+    dataSource: cardsTable
+
+dataSources:
+  - type: AMAZON_DYNAMODB
+    name: cardsTable
+    config:
+      tableName: !Ref CardsTable

@@ -1,0 +1,14 @@
+schema {
+  query: Query
+}
+
+type Query {
+  getCard(cardIdentifier: ID!): Card! @aws_iam @aws_cognito_user_pools
+}
+
+type Card @aws_iam @aws_cognito_user_pools {
+  # Keys
+  cardIdentifier: String!
+
+  #Properties
+}
