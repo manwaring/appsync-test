@@ -1,4 +1,5 @@
 name: appsync-test
+logicalId: AppsynctestGraphQlApi
 schema: appsync/schema.graphql
 authentication:
   type: AMAZON_COGNITO_USER_POOLS

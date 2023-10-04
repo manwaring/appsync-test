@@ -4,14 +4,13 @@
     "deploy": "sls deploy",
     "remove": "sls remove"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@fabrary/serverless-appsync-plugin": "^0.0.1",
     "amplify-appsync-simulator": "^2.4.1",
     "amplify-velocity-template": "^1.4.12",
     "graphql": "^16.8.0",
     "graphql-request": "^5.2.0",
-    "serverless": "^3.34.0",
-    "serverless-appsync-plugin": "^2.3.1"
+    "serverless": "^3.34.0"
   },
   "author": "",
   "license": ""
