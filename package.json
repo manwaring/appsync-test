@@ -5,7 +5,7 @@
     "remove": "sls remove"
   },
   "devDependencies": {
-    "@fabrary/serverless-appsync-plugin": "^0.0.1",
+    "@fabrary/serverless-appsync-plugin": "^0.0.3",
     "amplify-appsync-simulator": "^2.4.1",
     "amplify-velocity-template": "^1.4.12",
     "graphql": "^16.8.0",

@@ -5,7 +5,7 @@ useDotenv: true
 configValidationMode: error
 
 plugins:
-  - serverless-appsync-plugin
+  - "@fabrary/serverless-appsync-plugin"
 
 provider:
   logRetentionInDays: 3
